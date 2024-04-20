@@ -212,9 +212,9 @@ function GiveawaysTable({ giveaways }) {
 }
 
 function SortGames({ sortBy, setSortBy }) {
-  let relevance = "Relevance";
-  let title = "Title";
-  let release = "Release";
+  let relevance = "Relevance ▴";
+  let title = "Title ▴";
+  let release = "Release ▴";
   
   if(sortBy == "relevance") {
     relevance = "Relevance ▾"
@@ -236,9 +236,9 @@ function SortGames({ sortBy, setSortBy }) {
 }
 
 function SortGiveaways({ sortBy, setSortBy }) {
-  let value = "Value";
-  let popularity = "Popularity";
-  let date = "End Date";
+  let value = "Value ▴";
+  let popularity = "Popularity ▴";
+  let date = "End Date ▴";
   
   if(sortBy == "value") {
     value = "Value ▾"
