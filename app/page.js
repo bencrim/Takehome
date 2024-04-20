@@ -542,7 +542,7 @@ async function GetGiveawaysSorted({ platform, type, sortBy, setSortedGiveaways})
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': '7b75cdd87cmsh52a4ef5a8dd7953p19eafdjsn094377136470',
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
