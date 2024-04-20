@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
+const { REACT_APP_API_KEY } = process.env;
 import styles from "./page.module.css";
 import Table from 'react-bootstrap/Table';
 import Tab from 'react-bootstrap/Tab';
@@ -492,7 +493,7 @@ async function GetGamesSorted({ platform, genre, sortBy, setSortedGames}) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
     }
   };
@@ -511,7 +512,7 @@ async function GetGiveaways() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
@@ -540,7 +541,7 @@ async function GetGiveawaysSorted({ platform, type, sortBy, setSortedGiveaways})
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
