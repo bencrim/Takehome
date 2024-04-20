@@ -9,6 +9,7 @@ import Stack from 'react-bootstrap/Stack';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
+require('dotenv').config()
 
 export default function Home() {
   const [games, setGames] = useState(() => GetGames());
@@ -493,7 +494,7 @@ async function GetGamesSorted({ platform, genre, sortBy, setSortedGames}) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
     }
   };
@@ -512,7 +513,7 @@ async function GetGiveaways() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
