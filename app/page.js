@@ -463,7 +463,7 @@ async function GetGames() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': '7b75cdd87cmsh52a4ef5a8dd7953p19eafdjsn094377136470',
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
     }
   };
@@ -494,7 +494,7 @@ async function GetGamesSorted({ platform, genre, sortBy, setSortedGames}) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': '7b75cdd87cmsh52a4ef5a8dd7953p19eafdjsn094377136470',
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
     }
   };
@@ -513,7 +513,7 @@ async function GetGiveaways() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': '7b75cdd87cmsh52a4ef5a8dd7953p19eafdjsn094377136470',
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
