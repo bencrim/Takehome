@@ -492,7 +492,7 @@ async function GetGamesSorted({ platform, genre, sortBy, setSortedGames}) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
     }
   };
@@ -511,7 +511,7 @@ async function GetGiveaways() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
@@ -540,7 +540,7 @@ async function GetGiveawaysSorted({ platform, type, sortBy, setSortedGiveaways})
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': `${REACT_APP_API_KEY}`,
+      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'gamerpower.p.rapidapi.com'
     }
   };
