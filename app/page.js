@@ -123,10 +123,10 @@ function GamesTable({ games }) {
       <tbody>
         {sortedGames.map(
           (game) => (
-            <tr>
+            <tr key={game.id}>
               <td>{game.platform}</td>
               <td>{game.genre}</td>
-              <td><img src={game.thumbnail} class="img-thumbnail" alt="Responsive image"></img></td>
+              <td ><img src={game.thumbnail} class="img-thumbnail" alt="Responsive image"></img></td>
               <td><a href={game.game_url}>{game.title}</a></td>
               <td>{game.release_date}</td>
             </tr>
@@ -195,7 +195,7 @@ function GiveawaysTable({ giveaways }) {
       <tbody>
         {sortedGiveaways.map(
           (giveaway) => (
-            <tr>
+            <tr key={giveaway.id}>
               <td>{giveaway.platforms}</td>
               <td>{giveaway.type}</td>
               <td>{giveaway.worth}</td>
@@ -276,7 +276,7 @@ function Platform({ platforms, setPlatform, games }) {
       <DropdownButton id="dropdown-basic-button" title="Platform" variant={variant}>
         {platforms.map(
           (platform) => (
-            <Dropdown.Item onClick={() => {
+            <Dropdown.Item key={platform} onClick={() => {
               let platformOut = "";
               if (platform == "All"){
                 platformOut = "";
@@ -359,7 +359,7 @@ function Genre({ genres, setGenre }) {
       <DropdownButton id="dropdown-basic-button" title="Genre" variant='info'>
         {genres.map(
           (genre) => (
-            <Dropdown.Item onClick={() => {
+            <Dropdown.Item key={genre} onClick={() => {
               let genreOut = "";
               if (genre == "All"){
                 genreOut = "";
@@ -433,7 +433,7 @@ function Type({ types, setType }) {
         <DropdownButton id="dropdown-basic-button" title="Type" variant='warning'>
         {types.map(
           (type) => (
-            <Dropdown.Item onClick={() => {
+            <Dropdown.Item key={type} onClick={() => {
               let typeOut = "";
               if (type == "All"){
                 typeOut = "";
